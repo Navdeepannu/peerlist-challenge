@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white dark:bg-black flex flex-col items-center justify-center px-4 py-12">
       <div className="max-w-2xl w-full text-center mb-10">
-        <h1 className="text-2xl md:text-4xl font-extrabold tracking-tight text-neutral-900 dark:text-neutral-100 mb-4 flex items-center justify-center gap-2 pb-2">
+        <h1 className="text-md md:text-4xl font-extrabold tracking-tight text-neutral-900 dark:text-neutral-100 mb-4 flex items-center justify-center gap-2 pb-2">
           <PointerHighlight
             pointerClassName="text-[#05aa44]"
             containerClassName="inline-block"
@@ -18,7 +18,7 @@ export default function Home() {
               href={
                 "https://peerlist.io/challenges/interaction-design-challenge-aug25"
               }
-              className=" bg-clip-text bg-gradient-to-b dark:from-neutral-200 dark:via-neutral-200 dark:to-neutral-600 from-neutral-600 via-neutral-700 to-neutral-900 px-2 text-transparent"
+              className="bg-clip-text bg-gradient-to-b dark:from-neutral-200 dark:via-neutral-200 dark:to-neutral-600 from-neutral-600 via-neutral-700 to-neutral-900 px-2 text-transparent"
             >
               Peerlist
             </Link>
