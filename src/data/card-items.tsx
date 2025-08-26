@@ -1,5 +1,4 @@
 import { IconUserCircle, IconWorldCheck } from "@tabler/icons-react";
-import { people } from "./people";
 import InputOtpDemo from "@/components/inputoptDemo";
 import AvatarDemo from "@/components/avatar-demo";
 
