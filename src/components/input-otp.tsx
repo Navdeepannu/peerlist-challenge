@@ -68,7 +68,7 @@ export default function OTPInput() {
       case "success":
         return "text-green-600 dark:text-green-700";
       case "error":
-        return "text-red-700 dark:text-red-500";
+        return "text-red-700 dark:text-red-600";
       default:
         return "";
     }
