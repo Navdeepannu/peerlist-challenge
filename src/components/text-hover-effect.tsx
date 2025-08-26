@@ -5,12 +5,10 @@ import { motion } from "motion/react";
 export const TextHoverEffect = ({
   text,
   duration,
-  marquee = false,
 }: {
   text: string;
   duration?: number;
   automatic?: boolean;
-  marquee?: boolean;
 }) => {
   const svgRef = useRef<SVGSVGElement>(null);
   const [cursor, setCursor] = useState({ x: 0, y: 0 });
