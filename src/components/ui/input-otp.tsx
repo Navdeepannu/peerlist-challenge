@@ -40,7 +40,6 @@ function InputOTPGroup({ className, ...props }: React.ComponentProps<"div">) {
 function InputOTPSlot({
   index,
   className,
-  ...props
 }: React.ComponentProps<"div"> & {
   index: number;
 }) {
@@ -48,6 +47,7 @@ function InputOTPSlot({
   const { char, hasFakeCaret, isActive } = inputOTPContext?.slots[index] ?? {};
   const ref = React.useRef<HTMLDivElement>(null);
 
+  // Auto-focus the first slot on mount
   React.useEffect(() => {
     if (index === 0 && ref.current) {
       ref.current.focus();

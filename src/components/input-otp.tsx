@@ -118,8 +118,8 @@ export default function OTPInput() {
                 OTP Verification
               </h2>
               <p className="mt-3 text-sm text-neutral-600 dark:text-neutral-400">
-                We've sent a 6-digit code to your registered device. Enter it
-                below to verify your identity.
+                We&apos;ve sent a 6-digit code to your registered device. Enter
+                it below to verify your identity.
               </p>
             </div>
             {/* OTP Input Fields */}
@@ -179,7 +179,7 @@ export default function OTPInput() {
 
             {/* Resend option */}
             <p className="mt-4 text-xs text-neutral-500 dark:text-neutral-400">
-              Didn't receive the code?{" "}
+              Didn&apos;t receive the code?{" "}
               <button className="cursor-pointer text-neutral-700 underline hover:text-neutral-900 dark:text-neutral-300 dark:hover:text-neutral-100">
                 Resend OTP
               </button>
