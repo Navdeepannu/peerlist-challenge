@@ -3,7 +3,7 @@ import { TextHoverEffect } from "./text-hover-effect";
 
 const Footer = () => {
   return (
-    <div className="dark:bg-black bg-white">
+    <div className="bg-white dark:bg-black">
       <TextHoverEffect text="NAVDEEP" />
     </div>
   );

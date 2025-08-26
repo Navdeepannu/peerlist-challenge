@@ -5,13 +5,13 @@ import { IconSmartHome } from "@tabler/icons-react";
 
 const Navbar = () => {
   return (
-    <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50">
-      <div className="bg-white/80 dark:bg-black/80 backdrop-blur-md border border-neutral-200 dark:border-neutral-800 rounded-full px-6 py-3 flex items-center gap-6 shadow-lg">
+    <nav className="fixed top-4 left-1/2 z-50 -translate-x-1/2 transform">
+      <div className="flex items-center gap-6 rounded-full border border-neutral-200 bg-white/80 px-6 py-3 shadow-lg backdrop-blur-md dark:border-neutral-800 dark:bg-black/80">
         <Link
           href={"/"}
-          className="text-neutral-700 dark:text-neutral-300 hover:text-black dark:hover:text-white transition-colors px-2  rounded-full"
+          className="rounded-full px-2 text-neutral-700 transition-colors hover:text-black dark:text-neutral-300 dark:hover:text-white"
         >
-          <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-blue-500 to-transparent  h-px" />
+          <span className="absolute inset-x-0 -bottom-px mx-auto h-px w-1/2 bg-gradient-to-r from-transparent via-blue-500 to-transparent" />
           <IconSmartHome />
         </Link>
         <ThemeToggle />

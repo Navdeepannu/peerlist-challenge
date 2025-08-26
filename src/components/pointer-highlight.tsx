@@ -58,8 +58,8 @@ export function PointerHighlight({
         >
           <motion.div
             className={cn(
-              "absolute inset-0 rounded border-2 border-transparent bg-gradient-to-r from-black via-neutral-600 to-black dark:from-neutral-300 dark:via-neutral-500 dark:to-neutral-300 pointer-events-none",
-              rectangleClassName
+              "pointer-events-none absolute inset-0 rounded border-2 border-transparent bg-gradient-to-r from-black via-neutral-600 to-black dark:from-neutral-300 dark:via-neutral-500 dark:to-neutral-300",
+              rectangleClassName,
             )}
             style={{
               background:

@@ -1,41 +1,31 @@
 "use client";
 import { IconMoonStars, IconSun } from "@tabler/icons-react";
-import React, { useEffect, useState } from "react";
-
-const THEME_KEY = "theme";
+import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 
 export default function ThemeToggle() {
-  const [theme, setTheme] = useState<"light" | "dark">("dark");
+  const [mounted, setMounted] = useState(false);
+  const { theme, setTheme } = useTheme();
 
   useEffect(() => {
-    // On mount, set theme from localStorage or system preference
-    const stored = localStorage.getItem(THEME_KEY);
-    if (stored === "light" || stored === "dark") {
-      setTheme(stored);
-      document.documentElement.classList.toggle("dark", stored === "dark");
-    } else {
-      const prefersDark = window.matchMedia(
-        "(prefers-color-scheme: dark)"
-      ).matches;
-      setTheme(prefersDark ? "dark" : "light");
-      document.documentElement.classList.toggle("dark", prefersDark);
-    }
+    setMounted(true);
   }, []);
 
-  const toggleTheme = () => {
-    const newTheme = theme === "dark" ? "light" : "dark";
-    setTheme(newTheme);
-    localStorage.setItem(THEME_KEY, newTheme);
-    document.documentElement.classList.toggle("dark", newTheme === "dark");
-  };
+  if (!mounted) {
+    return (
+      <div className="flex h-6 w-6 cursor-pointer rounded-full shadow focus:outline-none">
+        {/* Placeholder to prevent layout shift */}
+      </div>
+    );
+  }
 
   return (
     <button
       aria-label={
         theme === "dark" ? "Switch to light mode" : "Switch to dark mode"
       }
-      onClick={toggleTheme}
-      className="flex rounded-full shadow focus:outline-none cursor-pointer"
+      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+      className="flex cursor-pointer rounded-full shadow focus:outline-none"
     >
       {theme === "dark" ? <IconSun /> : <IconMoonStars />}
     </button>

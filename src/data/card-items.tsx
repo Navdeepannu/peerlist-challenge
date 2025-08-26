@@ -11,8 +11,9 @@ export const items = [
     link: "/components/avatar",
   },
   {
-    title: "OTP Input Design",
-    description: "Dive into the transformative power of technology.",
+    title: "Interactive OTP Input",
+    description:
+      "Beautiful OTP verification with glare animations and validation.",
     header: <InputOtpDemo />,
     link: "/components/input-otp",
     icon: <IconWorldCheck className="h-4 w-4 text-neutral-500" />,

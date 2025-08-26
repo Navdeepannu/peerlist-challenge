@@ -33,11 +33,11 @@ export const AnimatedAvatar = ({
 
   const rotate = useSpring(
     useTransform(x, [-100, 100], [-45, 45]),
-    springConfig
+    springConfig,
   );
   const translateX = useSpring(
     useTransform(x, [-100, 100], [-50, 50]),
-    springConfig
+    springConfig,
   );
 
   const handleMouseMove = (event: React.MouseEvent<HTMLDivElement>) => {
@@ -109,7 +109,7 @@ export const AnimatedAvatar = ({
                 >
                   {/* Morphing glass background layers */}
                   <motion.div
-                    className="absolute inset-0 bg-gradient-to-br from-neutral-900/98 via-neutral-800/95 to-black/98 dark:from-black/90 dark:via-black/70 dark:to-black/60 backdrop-blur-xl"
+                    className="absolute inset-0 bg-gradient-to-br from-neutral-900/98 via-neutral-800/95 to-black/98 backdrop-blur-xl dark:from-black/90 dark:via-black/70 dark:to-black/60"
                     animate={{
                       borderRadius: ["50%", "12px"],
                     }}
@@ -159,7 +159,7 @@ export const AnimatedAvatar = ({
 
                   {/* Morphing border gradients */}
                   <motion.div
-                    className="absolute -bottom-px left-1/2 h-px w-[60%] -translate-x-1/2 bg-gradient-to-r from-transparent via-neutral-600/60 dark:via-zinc-400/60 to-transparent"
+                    className="absolute -bottom-px left-1/2 h-px w-[60%] -translate-x-1/2 bg-gradient-to-r from-transparent via-neutral-600/60 to-transparent dark:via-zinc-400/60"
                     animate={{
                       opacity: [0.4, 0.8, 0.4],
                       scaleX: [0.8, 1.1, 0.8],
@@ -171,7 +171,7 @@ export const AnimatedAvatar = ({
                     }}
                   />
                   <motion.div
-                    className="absolute -top-px left-1/2 h-px w-[40%] -translate-x-1/2 bg-gradient-to-r from-transparent via-neutral-500/50 dark:via-zinc-300/50 to-transparent"
+                    className="absolute -top-px left-1/2 h-px w-[40%] -translate-x-1/2 bg-gradient-to-r from-transparent via-neutral-500/50 to-transparent dark:via-zinc-300/50"
                     animate={{
                       opacity: [0.2, 0.6, 0.2],
                       scaleX: [0.9, 1.2, 0.9],
@@ -184,7 +184,7 @@ export const AnimatedAvatar = ({
                     }}
                   />
                   <motion.div
-                    className="absolute top-1/2 left-0 h-[40%] w-px -translate-y-1/2 bg-gradient-to-b from-transparent via-neutral-500/40 dark:via-zinc-500/40 to-transparent"
+                    className="absolute top-1/2 left-0 h-[40%] w-px -translate-y-1/2 bg-gradient-to-b from-transparent via-neutral-500/40 to-transparent dark:via-zinc-500/40"
                     animate={{
                       opacity: [0.3, 0.7, 0.3],
                       scaleY: [0.8, 1.1, 0.8],
@@ -226,7 +226,7 @@ export const AnimatedAvatar = ({
                           onClick={() =>
                             window.open(
                               `https://x.com/${item.twitterHandle}`,
-                              "_blank"
+                              "_blank",
                             )
                           }
                           className="flex items-center justify-center rounded-full bg-white/20 p-1 backdrop-blur-sm transition-all hover:scale-110 hover:bg-white/30"
@@ -248,7 +248,7 @@ export const AnimatedAvatar = ({
             width={100}
             src={item.image}
             alt={item.name}
-            className="border-background relative !m-0 h-14 w-14 rounded-full border-1 dark:border-4 object-cover object-top !p-0 transition-all duration-500 ease-out group-hover:z-30 "
+            className="border-background relative !m-0 h-14 w-14 rounded-full border-1 object-cover object-top !p-0 transition-all duration-500 ease-out group-hover:z-30 dark:border-4"
             animate={{
               scale: hoveredIndex === item.id ? 1.15 : 1,
               y: hoveredIndex === item.id ? -2 : 0,
