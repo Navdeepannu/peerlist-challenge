@@ -6,6 +6,6 @@ A collection of creative UI components built for the Peerlist Interactive Design
 
 ## Live Demo
 
-Visit the [](https://peerlist.io/challenges/interaction-design-challenge-aug25)
+Visit the [https://peerlist-challenge-pi.vercel.app/]([https://peerlist.io/challenges/interaction-design-challenge-aug25](https://peerlist-challenge-pi.vercel.app/))
 
 Built with ❤️ for the Peerlist Design Challenge
