@@ -1,5 +1,5 @@
 "use client";
-import { IconMoon, IconMoonStars, IconSun } from "@tabler/icons-react";
+import { IconMoonStars, IconSun } from "@tabler/icons-react";
 import React, { useEffect, useState } from "react";
 
 const THEME_KEY = "theme";

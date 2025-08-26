@@ -1,7 +1,6 @@
 import { BentoGrid, BentoGridItem } from "@/components/bento-grid";
 import { PointerHighlight } from "@/components/pointer-highlight";
 import { items } from "@/data/card-items";
-import { IconClick } from "@tabler/icons-react";
 import Link from "next/link";
 
 export default function Home() {

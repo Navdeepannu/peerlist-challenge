@@ -2,7 +2,6 @@ import React from "react";
 import ThemeToggle from "./theme-toggle";
 import Link from "next/link";
 import { IconSmartHome } from "@tabler/icons-react";
-import { div } from "motion/react-client";
 
 const Navbar = () => {
   const navlinks = [{ title: "Home", link: "/" }];
